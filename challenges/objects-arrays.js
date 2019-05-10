@@ -42,7 +42,7 @@ console.log(tyrannosaurus.period);
 
 
 // Create a new roar method for the tyrannosaurus.  When called, return "RAWERSRARARWERSARARARRRR!" Log the result.
-velociraptor.roar = function() {
+velociraptor.roar = () => {
   return 'RAWERSRARARWERSARARARRRR!';
 }
 
@@ -90,13 +90,7 @@ console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called uni that contains them all. Log the result. */
-const uni = [];
-
-for(let i = 0; i < universities.length; i++) {
-  if(universities[i].includes("uni")) {
-    uni.push(universities[i]);
-  }
-}
+const uni = universities.filter(university => university.includes('Uni'));
 
 console.log(uni);
 
